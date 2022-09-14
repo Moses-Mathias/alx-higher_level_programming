@@ -3,6 +3,7 @@
 Square Class: defines a square based on 3-square.py
 """
 
+
 class Square:
     """class square that defines a square"""
     def __init__(self, size=0):

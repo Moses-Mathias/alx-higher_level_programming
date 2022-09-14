@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-
 """
 Square Class: Defines a square based on 2-square.py
 """
+
 
 class Square:
     """class Square that defines a square"""
