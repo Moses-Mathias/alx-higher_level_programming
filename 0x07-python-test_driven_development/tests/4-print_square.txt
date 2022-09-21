@@ -1,109 +1,57 @@
-===============================
- Testing module 4-print_square.py
-===============================
+The ``4-print_square`` module
+============================
 
-``print_square(size)`` prints a square with the character #,
-size must be an integer, otherwise raise a TypeError exception.
+Using ``print_square``
+---------------------
 
-Numbers
-=======
+Importing function from the module:
 
-First, Import module and function
+    >>> print_square = __import__('4-print_square').print_square
 
-       >>> print_square = __import__('4-print_square').print_square
+Printing a square with a size of 5
 
-Validate with Integer
+    >>> print_square(5)
+    #####
+    #####
+    #####
+    #####
+    #####
 
-       >>> print_square(5)
-       #####
-       #####
-       #####
-       #####
-       #####
+Passing 0 as the size of the square
 
-       >>> print_square(0)
+    >>> print_square(0)
 
-       >>> print_square(1)
-       #
+Passing a float number as the size of the square
 
-       >>> print_square(int(float(5.2)))
-       #####
-       #####
-       #####
-       #####
-       #####
+    >>> print_square(1.0)
+    Traceback (most recent call last):
+    	      ...
+    TypeError: size must be an integer
 
-Other types that handles errors
-===============================
+Passing a string as the size of the square
 
-Negative number
+    >>> print_square('2')
+    Traceback (most recent call last):
+    	      ...
+    TypeError: size must be an integer
 
-       >>> print_square(-5)
-       Traceback (most recent call last):
-	    ...
-       ValueError: size must be >= 0
+Passing a negative number as the size of the square
 
-String type
+    >>> print_square(-2)
+    Traceback (most recent call last):
+    	     ...
+    ValueError: size must be >= 0
 
-       >>> print_square("J")
-       Traceback (most recent call last):
-	    ...
-       TypeError: size must be an integer
+Passing None as the size of the square
 
-List type
+    >>> print_square(None)
+    Traceback (most recent call last):
+    	      ...
+    TypeError: size must be an integer
 
-       >>> print_square([1, 2, 3])
-       Traceback (most recent call last):
-	    ...
-       TypeError: size must be an integer
+Missing argument
 
-Set type
-
-       >>> print_square({1, 2, 3})
-       Traceback (most recent call last):
-	    ...
-       TypeError: size must be an integer
-
-Tuple type
-
-      >>> print_square((1, 2))
-      Traceback (most recent call last):
-	    ...
-      TypeError: size must be an integer
-
-Dict type
-
-     >>> print_square({1:"me"})
-     Traceback (most recent call last):
-	    ...
-     TypeError: size must be an integer
-
-Float type
-
-      >>> print_square(3.14)
-      Traceback (most recent call last):
-	    ...
-      TypeError: size must be an integer
-
-None values and other validations
-=================================
-
-      >>> print_square()
-      Traceback (most recent call last):
-	    ...
-      TypeError: print_square() missing 1 required positional argument: 'size'
-
-      >>> print_square(6, 3)
-      Traceback (most recent call last):
-	    ...
-      TypeError: print_square() takes 1 positional argument but 2 were given
-
-      >>> print_square(-2.1)
-      Traceback (most recent call last):
-	    ...
-      TypeError: size must be an integer
-
-      >>> print_square(None)
-      Traceback (most recent call last):
-      ...
-      TypeError: size must be an integer
+   >>> print_square()
+   Traceback (most recent call last):
+   	     ...
+   TypeError: print_square() missing 1 required positional argument: 'size'
