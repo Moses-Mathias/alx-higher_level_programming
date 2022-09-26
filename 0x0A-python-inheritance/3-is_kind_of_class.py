@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+""" Program that checks if a class is the same object os inherit from """
+
+
 def is_kind_of_class(obj, a_class):
     """ Function that returns True/False if obj is an instance of a_class
     Args:
