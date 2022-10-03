@@ -9,6 +9,7 @@ import csv
 
 class Base:
     """ first class Base """
+    
     __nb_objects = 0
 
     def __init__(self, id=None):
@@ -24,6 +25,7 @@ class Base:
         """
         returns the JSON string representation of list_dictionaries
         """
+        
         if list_dictionaries is None:
             return "[]"
         else:
@@ -32,6 +34,7 @@ class Base:
     @classmethod
     def save_to_file(cls, list_objs):
         """ writes the JSON string representation of list_objs to a file """
+        
         my_list = []
         fname = cls.__name__ + '.json'
         if (list_objs is not None):
@@ -52,6 +55,7 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """ returns an instance with all attributes already set """
+        
         if (cls.__name__ == 'Rectangle'):
             dummy = cls(1, 2)
         elif (cls.__name__ == 'Square'):
@@ -62,6 +66,7 @@ class Base:
     @classmethod
     def load_from_file(cls):
         """ returns a list of instances """
+        
         my_list = []
         fname = cls.__name__ + '.json'
         if os.path.isfile(fname):
@@ -75,6 +80,7 @@ class Base:
     @classmethod
     def save_to_file_csv(cls, list_objs):
         """ serializes list objects in csv format and save"""
+        
         fname = cls.__name__ + '.csv'
         my_list = []
         if (list_objs is not None):
@@ -93,6 +99,7 @@ class Base:
     @classmethod
     def load_from_file_csv(cls):
         """ deserializes csv of the list of instances """
+        
         my_list = []
         dc = {}
         fname = cls.__name__ + '.csv'
