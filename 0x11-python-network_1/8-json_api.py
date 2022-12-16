@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """ POST and Search API """
+
 import requests
 from sys import argv
 
